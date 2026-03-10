@@ -1,10 +1,6 @@
-<p align="center">
-  <img src="assets/banner_alura.svg" alt="Banner Telecom X" width="100%">
-</p>
-
 # Telecom X — Análisis de Evasión de Clientes
 
-### Challenge 2 · Data Science · Alura Latam + Oracle Next Education
+### Challenge 1 · Data Science · Alura Latam + Oracle Next Education
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
@@ -128,3 +124,15 @@ TelecomX_P1/
     ├── banner_alura.svg
     └── images/
         └── img.png
+```
+### 📩 
+
+AtromicLink(LinkedGTF)
+Jose Torreglosa.
+
+<img src="./images/Despedida.gif" alt="GIF de Bienvenida" width="600">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jtorreglosam/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:josddaniel1@gmail.com)
+
+---
