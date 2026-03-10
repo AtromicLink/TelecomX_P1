@@ -1,99 +1,130 @@
-# Telecom X — Análisis de Evasión de Clientes (Churn)
+<p align="center">
+  <img src="assets/banner_alura.svg" alt="Banner Telecom X" width="100%">
+</p>
 
-## Descripción del proyecto
-Este proyecto desarrolla un análisis de datos orientado a identificar patrones de evasión de clientes (*churn*) en Telecom X. A partir de un dataset en formato JSON, se realiza un proceso completo de extracción, transformación, limpieza, estandarización y análisis exploratorio de datos, con el objetivo de generar información útil para la toma de decisiones estratégicas.
+# Telecom X — Análisis de Evasión de Clientes
 
-El enfoque del proyecto combina una perspectiva técnica y de negocio: no solo busca preparar los datos correctamente, sino también comprender qué variables pueden estar asociadas con una mayor probabilidad de cancelación del servicio.
+### Challenge 2 · Data Science · Alura Latam + Oracle Next Education
 
----
-
-## Objetivo
-Analizar el comportamiento de los clientes de Telecom X para detectar factores relacionados con la evasión, apoyando la formulación de estrategias que contribuyan a la retención de usuarios y a la reducción del churn.
-
----
-
-## Problema de negocio
-La evasión de clientes representa uno de los principales retos para las empresas de telecomunicaciones, ya que impacta directamente los ingresos, la estabilidad comercial y los costos de adquisición de nuevos usuarios.
-
-En este contexto, el análisis de churn permite responder preguntas clave como:
-
-- ¿Qué tipo de clientes presentan mayor tendencia a cancelar el servicio?
-- ¿Existen variables contractuales, demográficas o financieras asociadas con la evasión?
-- ¿Qué patrones pueden orientar acciones preventivas de retención?
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status">
+</p>
 
 ---
 
-## Alcance del análisis
-El proyecto contempla las siguientes etapas:
+## Tabla de Contenidos
 
-1. **Extracción de datos** desde una fuente JSON.
-2. **Conversión y normalización** de la información a un DataFrame de Pandas.
-3. **Exploración de la estructura del dataset**, tipos de datos y variables disponibles.
-4. **Limpieza y tratamiento de datos**, incluyendo validación de nulos, duplicados e inconsistencias.
-5. **Creación de nuevas variables**, como `Cuentas_Diarias`.
-6. **Estandarización de datos y renombre de columnas** para facilitar su interpretación.
-7. **Análisis exploratorio de datos (EDA)** con métricas descriptivas y visualizaciones.
-8. **Identificación de patrones de churn** en variables categóricas y numéricas.
-9. **Elaboración de conclusiones e insights** con enfoque estratégico.
-
----
-
-## Fuente de datos
-Los datos utilizados en este proyecto provienen del challenge de Telecom X en formato JSON, e incluyen información relacionada con:
-
-- datos demográficos del cliente,
-- servicios contratados,
-- información de cuenta y facturación,
-- estado de evasión (*churn*).
+1. [Sobre el Proyecto](#sobre-el-proyecto)
+2. [Problema de Negocio](#problema-de-negocio)
+3. [Metodología ETL](#metodología-etl)
+4. [Resultados del Análisis](#resultados-del-análisis)
+5. [Conclusiones e Insights](#conclusiones-e-insights)
+6. [Recomendaciones Estratégicas](#recomendaciones-estratégicas)
+7. [Estructura del Repositorio](#estructura-del-repositorio)
+8. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+9. [Instalación y Uso](#instalación-y-uso)
+10. [Autor](#autor)
 
 ---
 
-## Tecnologías utilizadas
-- **Python 3**
-- **Pandas**
-- **NumPy**
-- **Matplotlib**
-- **Seaborn**
-- **Jupyter Notebook**
+## Sobre el Proyecto
+
+Este proyecto desarrolla un análisis integral de evasión de clientes (*churn*) para Telecom X, a partir de un dataset en formato JSON con información demográfica, servicios contratados, facturación y estado de cancelación.
+
+El objetivo principal fue transformar datos crudos en información accionable mediante un proceso estructurado de extracción, limpieza, estandarización y análisis exploratorio, con el fin de identificar patrones asociados a la pérdida de clientes.
 
 ---
 
-## Metodología aplicada
-La metodología del análisis se desarrolló en cinco bloques principales:
+## Problema de Negocio
 
-### 1. Extracción y carga
-Se realizó la lectura del archivo JSON directamente desde la fuente de datos y su transformación a una estructura tabular mediante `pandas.json_normalize()`.
+La evasión de clientes representa un reto crítico para empresas del sector telecomunicaciones, ya que impacta de forma directa los ingresos recurrentes, incrementa los costos de adquisición y debilita la estabilidad comercial.
 
-### 2. Exploración inicial
-Se inspeccionaron columnas, tipos de datos y estructura general del dataset para comprender la naturaleza de las variables y su relevancia para el análisis de evasión.
+En este contexto, el análisis busca responder preguntas como:
 
-### 3. Limpieza y tratamiento
-Se identificaron y corrigieron problemas de calidad de datos, como:
-- valores nulos o vacíos,
-- variables numéricas almacenadas como texto,
-- categorías inconsistentes,
-- registros no aptos para el análisis de la variable objetivo.
-
-### 4. Transformación y estandarización
-Se aplicaron ajustes para mejorar la legibilidad y el análisis, entre ellos:
-- conversión de variables categóricas a formatos más consistentes,
-- renombre de columnas,
-- creación de variables derivadas,
-- preparación de campos para análisis descriptivo y visual.
-
-### 5. Análisis exploratorio
-Se estudiaron patrones de churn mediante:
-- estadísticas descriptivas,
-- distribución de la variable objetivo,
-- análisis por variables categóricas,
-- análisis comparativo de variables numéricas.
+- ¿Qué perfiles de clientes presentan mayor riesgo de evasión?
+- ¿Qué variables contractuales, financieras o de servicio están asociadas al churn?
+- ¿Qué hallazgos pueden orientar estrategias de retención más efectivas?
 
 ---
 
-## Estructura del repositorio
+## Metodología ETL
+
+El proyecto fue desarrollado bajo una lógica ETL compuesta por tres fases principales:
+
+### 1. Extracción
+Se realizó la carga del dataset desde una fuente JSON pública y su transformación a una estructura tabular con `pandas.json_normalize()`.
+
+### 2. Transformación
+Se llevaron a cabo tareas de:
+
+- exploración de columnas y tipos de datos,
+- tratamiento de valores nulos y registros inconsistentes,
+- corrección de formatos,
+- estandarización de variables categóricas,
+- renombre de columnas para facilitar su interpretación,
+- creación de la variable `Cuentas_Diarias`.
+
+### 3. Carga y Análisis
+Con la base ya limpia, se ejecutó el análisis exploratorio de datos, incluyendo métricas descriptivas, visualizaciones y evaluación de la distribución del churn en variables categóricas y numéricas.
+
+---
+
+## Resultados del Análisis
+
+Entre los hallazgos más relevantes del análisis se destacan los siguientes:
+
+### 1. Distribución general de churn
+Se identificó una proporción relevante de clientes que cancelaron el servicio, lo que confirma la importancia del problema y la necesidad de estrategias de retención basadas en datos.
+
+### 2. Tipo de contrato
+Los clientes con contratos más flexibles, especialmente mes a mes, presentan una mayor tendencia a la evasión frente a aquellos con compromisos de mayor duración.
+
+### 3. Antigüedad del cliente
+Los clientes con menor tiempo de permanencia muestran mayor vulnerabilidad al churn, lo que sugiere una ventana crítica en los primeros meses de relación.
+
+### 4. Cargos mensuales
+Se observó que los clientes con evasión tienden a registrar cargos mensuales más altos, lo que podría indicar sensibilidad al precio o baja percepción de valor.
+
+### 5. Método de pago
+Ciertos métodos de pago presentan una asociación más fuerte con la evasión, especialmente aquellos que no generan automatización o compromiso recurrente.
+
+---
+
+## Conclusiones e Insights
+
+El análisis permitió confirmar que la evasión no ocurre de manera aleatoria, sino que responde a patrones identificables en variables de permanencia, estructura contractual, facturación y método de pago.
+
+Estos resultados aportan una base sólida para futuras etapas de modelado predictivo, segmentación de clientes y diseño de estrategias de retención más precisas.
+
+---
+
+## Recomendaciones Estratégicas
+
+A partir de los hallazgos obtenidos, se sugieren las siguientes acciones:
+
+- fortalecer estrategias de fidelización para clientes con contratos mensuales,
+- diseñar acciones de retención temprana durante los primeros meses del ciclo de vida,
+- revisar propuestas de valor para clientes con cargos mensuales elevados,
+- incentivar métodos de pago automáticos,
+- utilizar estas variables como insumo base para un modelo predictivo de churn.
+
+---
+
+## Estructura del Repositorio
+
 ```bash
-.
-├── telecomx_churn_analysis.ipynb
-├── telecomx_churn_analysis_executed.ipynb
+TelecomX_P1/
+│
+├── TelecomX_LATAM.ipynb
+├── README.md
+├── LICENSE
 ├── telecomx_clientes_limpio.csv
-└── README.md
+│
+└── assets/
+    ├── banner_alura.svg
+    └── images/
+        └── img.png
